@@ -1,0 +1,7 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /test/
+
+RewriteRule ^(.*)\\.(gif|jpg|png|jpeg|css|js|swf)$ /public/$1.$2 [L,NC]
+RewriteRule ^page/(.*)/$ index.php?controller=page&action=index&slug=$1
