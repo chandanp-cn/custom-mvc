@@ -8,8 +8,8 @@ $cyan: rgb(1, 117, 167);
 body {
     margin:0;
     padding:0;
-    color:$white;
-    background-color:$black-2;
+    color:$black-2;
+    background-color:transparent;
 
     img {
         max-width: 100%;
@@ -42,7 +42,18 @@ body {
                 .social-media {
                     display: flex;
                 }
-            
+                .happy-new-year {
+                    background-image: url('../images/QZcG.gif');
+                    height:120px;
+                    
+                    width:100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    h2 {
+                        color:$white;
+                    }
+                }
         }
     }
 }

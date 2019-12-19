@@ -12,6 +12,6 @@ class HomeController extends BaseController
         $users = parent::loadModel('users');
         $d['users'] = $users->getAll();
 
-        parent::loadView('home', 'default', $d);
+        parent::loadView('home', 'newyear', $d);
     }
 }

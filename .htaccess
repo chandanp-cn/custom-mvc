@@ -1,7 +1,11 @@
 Options -Indexes
 
 RewriteEngine On
-RewriteBase /test/
+RewriteBase /custom-mvc/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
 
 RewriteRule ^(.*)\\.(gif|jpg|png|jpeg|css|js|swf)$ /public/$1.$2 [L,NC]
-RewriteRule ^page/(.*)/$ index.php?controller=page&action=index&slug=$1
+RewriteRule ^page/(.*)/$ index.php?controller=page&action=index&slug=$1 [NC,L]
+RewriteRule ^api/user/(.*)/$ index.php?controller=user&action=$1 [L]
